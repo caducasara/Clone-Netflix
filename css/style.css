@@ -1,0 +1,190 @@
+:root{
+    --vermelho: #E50914;
+    --preto: #141414;   
+}
+
+@font-face {
+    font-family: 'Bebas';
+    src: url('../fonts/BebasNeue-Regular.ttf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Bebas';
+}
+
+html,body{
+    height: 100%;
+}
+
+/****/
+
+body{
+    background-color: var(--preto);
+}
+
+header{
+    display: flex;
+    justify-content: center;
+}
+
+header .header-wrapper{
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .header-wrapper h2{
+    font-size: 55px;
+    color: var(--vermelho);
+    letter-spacing: 5px;
+    margin-left: 15px;
+}
+
+header .header-wrapper ul a{
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    margin-right: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header .header-wrapper ul a:hover{
+    color: #ccc;
+}
+
+.main{
+    width: 100%;
+    height:70vh;
+    background: linear-gradient(rgba(0,0,0,.10),rgba(0,0,0.10)100%), url('../img/wither.jpg');
+    background-size: cover;
+    background-position: top right;
+    display: flex;
+    align-items: center;
+}
+
+
+.informacoes{
+    width: 60%;
+    margin-left: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.informacoes h3{
+    font-size: 100px;
+    color: white;
+}
+
+.informacoes p{
+    color: white;
+    font-size: 18px;
+    font-family: sans-serif;
+}
+
+.botoes{
+    margin-top: 50px;
+}
+
+.button{
+    background-color: rgba(0,0,0,.50);
+    color: white;
+    border: 0;
+    margin-right: 10px;
+    text-transform: uppercase;
+    font-size: 18px;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.button:hover{
+    background-color: rgba(255,255,255,.50);
+    color: black;
+}
+
+.button i{
+    margin-right: 5px;
+}
+
+.carrosel{
+    width: 100%;
+    max-height: 400px;
+}
+
+.carrosel img{
+    height: 100%;
+    margin: 10px;
+}
+
+/***/
+
+@media screen and (max-width:768px){
+    header{
+        padding: 10px 0;
+    }
+    .header-wrapper{
+        flex-direction: column;
+    }
+
+    .informacoes{
+        width: 90%;
+    }
+
+    .informacoes h3{
+        font-size: 70px;
+    }
+}
+
+@media screen and (max-width:600px){
+    .informacoes h3{
+        font-size: 60px;
+        color: white;
+    }
+
+    .informacoes p{
+        font-size: 15px;
+    }
+
+    .botoes{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        max-width: 300px;
+        margin-top: 30px;
+    }
+
+    .button{
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 425px){
+    header .header-wrapper ul a{
+        font-size: 12px;
+    }
+
+    .informacoes{
+        margin-left: 0;
+        padding: 0 2%;
+    }
+
+    .informacoes h3{
+        font-size: 50px;
+    }
+
+    .informacoes p{
+        font-size: 13px;
+    }
+
+    .bottoes{
+        width: 80%;
+    }
+
+    .button{
+        font-size: 15px;
+    }
+}
