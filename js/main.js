@@ -15,3 +15,15 @@ $('.owl-carousel').owlCarousel({
         }
     }
 })
+
+$('.btn-assistir').click(function(e){
+    e.stopPropagation();
+    $('.assistir').fadeIn(function(){
+        $('.assistir').css('display','flex');
+    });
+
+    $('body').click(function(){
+        $('.assistir').fadeOut();
+    });
+    //console.log('clique');
+});
