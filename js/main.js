@@ -25,5 +25,4 @@ $('.btn-assistir').click(function(e){
     $('body').click(function(){
         $('.assistir').fadeOut();
     });
-    //console.log('clique');
 });
